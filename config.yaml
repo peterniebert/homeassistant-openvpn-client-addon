@@ -1,0 +1,21 @@
+name: "OpenVPN Client"
+version: "0.1.1"
+slug: "openvpn_client"
+description: "OpenVPN Client"
+url: "https://github.com/r00tat/homeassistant-openvpn-client-addon"
+arch: ["armhf", "armv7", "aarch64", "amd64", "i386"]
+startup: "application"
+boot: "auto"
+host_network: true
+privileged:
+  - "NET_ADMIN"
+options:
+  ovpnfile: "/config/client.ovpn"
+schema:
+  ovpnfile": "str"
+map:
+  - "share:rw"
+  - "config:ro"
+ports:
+  "1194/udp": "1194"
+  "1194/tcp": "1194"
