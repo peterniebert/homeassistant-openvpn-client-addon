@@ -12,7 +12,7 @@ privileged:
 options:
   ovpnfile: "/config/client.ovpn"
 schema:
-  ovpnfile": "str"
+  ovpnfile: "str"
 map:
   - "share:rw"
   - "config:ro"
