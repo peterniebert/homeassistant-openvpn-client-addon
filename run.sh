@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bashio
 set -eo pipefail
 
 CONFIG_PATH=/data/options.json
 
-OVPNFILE="$(jq --raw-output '.ovpnfile' $CONFIG_PATH)"
+OVPNFILE="$(bashio::config 'ovpnfile')"
 OPENVPN_CONFIG=${OVPNFILE}
 
 ########################################################################################################################
@@ -23,14 +23,14 @@ function init_tun_interface() {
 }
 
 if [[ ! -f ${OPENVPN_CONFIG} ]]; then
-    echo "File ${OPENVPN_CONFIG} not found"
-    echo "Please specify the correct config file path in the settings page"
+    bashio::log.error "File ${OPENVPN_CONFIG} not found"
+    bashio::log.error "Please specify the correct config file path in the settings page"
     exit 1
 fi
 
 init_tun_interface
 
-echo "Setup the VPN connection with the following OpenVPN configuration."
+bashio::log.info "Setup the VPN connection with the following OpenVPN configuration."
 
 # try to connect to the server using the used defined configuration
 openvpn --config ${OPENVPN_CONFIG}
