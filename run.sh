@@ -23,7 +23,7 @@ function init_tun_interface() {
 
 if [[ ! -f ${OPENVPN_CONFIG} ]]; then
     bashio::log.error "File ${OPENVPN_CONFIG} not found"
-    bashio::log.error `ls -al /data`
+    bashio::log.error `cat $CONFIG_PATH`
     bashio::log.error "Please specify the correct config file path in the settings page"
     exit 1
 fi
