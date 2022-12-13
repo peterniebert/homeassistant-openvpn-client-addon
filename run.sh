@@ -41,3 +41,5 @@ bashio::log.info "Setup the VPN connection with the following OpenVPN configurat
 
 # try to connect to the server using the used defined configuration
 openvpn --config ${OPENVPN_CONFIG}
+bashio::log.error "We should not get here."
+
