@@ -4,7 +4,7 @@ slug: "openvpn_client"
 description: |
   This addon allows you to connect hassio to a central OpenVPN Server.
   If you configure the ovpn file to run a server, this should also work.
-url: "https://github.com/r00tat/homeassistant-openvpn-client-addon"
+url: "https://github.com/peterniebert/homeassistant-openvpn-client-addon"
 arch: ["armhf", "armv7", "aarch64", "amd64", "i386"]
 startup: "application"
 boot: "auto"
