@@ -1,5 +1,5 @@
 name: "OpenVPN Client"
-version: "0.1.5"
+version: "0.1.5a"
 slug: "openvpn_client"
 description: |
   This addon allows you to connect hassio to a central OpenVPN Server.
