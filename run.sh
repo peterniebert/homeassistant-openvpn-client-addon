@@ -1,6 +1,8 @@
 #!/usr/bin/env bashio
 
 CONFIG_PATH=/data/options.json
+declare OVPNFILE
+declare OPENVPN_CONFIG
 
 OVPNFILE="$(bashio::config 'ovpnfile')"
 OPENVPN_CONFIG=${OVPNFILE}
