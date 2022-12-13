@@ -11,9 +11,8 @@ RUN apk --no-cache --no-progress upgrade && \
     rm -rf /tmp/*
 
 # Copy data for add-on
-RUN mkdir -p /etc/init.d/openvpn/
-COPY run.sh /etc/init.d/openvpn
+COPY run.sh /
 
-RUN chmod a+x /etc/init.d/openvpn/run.sh
+RUN chmod 555 /run.sh
 
-# CMD [ "/run.sh" ]
+CMD [ "/run.sh" ]
