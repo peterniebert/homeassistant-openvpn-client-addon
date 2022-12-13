@@ -4,6 +4,10 @@ CONFIG_PATH=/data/options.json
 declare OVPNFILE
 declare OPENVPN_CONFIG
 
+if ! bashio::config.has_value 'ovpnfile' ; then
+    bashio::exit.nok "no ovpnfile specified!"
+fi
+
 OVPNFILE=$(bashio::config 'ovpnfile')
 OPENVPN_CONFIG=${OVPNFILE}
 
