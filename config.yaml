@@ -6,7 +6,7 @@ description: |
   If you configure the ovpn file to run a server, this should also work.
 url: "https://github.com/peterniebert/homeassistant-openvpn-client-addon"
 arch: ["armhf", "armv7", "aarch64", "amd64", "i386"]
-startup: "application"
+# startup: "application"
 boot: "auto"
 init: false
 host_network: true
