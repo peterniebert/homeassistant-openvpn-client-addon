@@ -3,6 +3,8 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # Install requirements for add-on
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add jq openvpn \
