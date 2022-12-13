@@ -1,5 +1,4 @@
 #!/usr/bin/env bashio
-set -eo pipefail
 
 CONFIG_PATH=/data/options.json
 
